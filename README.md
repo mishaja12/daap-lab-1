@@ -10,7 +10,7 @@ cd WordGame
 dotnet run --project WordGame.Server
 ```
 
-Відкрити **http://localhost:5119** у браузері. Ввести ім’я → Connect → чекати літери → ввести слово → Submit (або Enter).
+ **http://localhost:5119** . Ввести ім’я - Connect - чекати літери - ввести слово - Submit (або Enter).
 
 **Структура:** WordGame.Server — ASP.NET Core (gRPC + Blazor).
 
