@@ -11,6 +11,8 @@ dotnet run --project WordGame.Server
 ```
 
  **http://localhost:5119** . Ввести ім’я - Connect - чекати літери - ввести слово - Submit (або Enter).
+<img width="1879" height="1025" alt="image" src="https://github.com/user-attachments/assets/3e958998-35c4-4cfb-a44b-d2c021f22f15" />
+<img width="1900" height="1029" alt="image" src="https://github.com/user-attachments/assets/eedc1c05-bd01-4d83-9178-35139361b6fc" />
 
 **Структура:** WordGame.Server — ASP.NET Core (gRPC + Blazor).
 
