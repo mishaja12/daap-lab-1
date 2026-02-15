@@ -1,0 +1,28 @@
+syntax = "proto3";
+option csharp_namespace = "WordGame.Grpc";
+
+service WordGame {
+  rpc JoinGame(JoinRequest) returns (JoinResponse);
+  rpc SubscribeToGame(SubscribeRequest) returns (stream GameEvent);
+  rpc SubmitWord(SubmitWordRequest) returns (SubmitWordResponse);
+}
+
+message JoinRequest { string player_name = 1; }
+message JoinResponse { string player_id = 1; }
+
+message SubscribeRequest { string player_id = 1; }
+
+message GameEvent {
+  oneof event {
+    LettersOffered letters_offered = 1;
+    RoundResult round_result = 2;
+  }
+}
+message LettersOffered { string letters = 1; }
+message RoundResult { string winner_name = 1; string winning_word = 2; }
+
+message SubmitWordRequest { string player_id = 1; string word = 2; }
+message SubmitWordResponse {
+  bool accepted = 1;
+  string message = 2;
+}
